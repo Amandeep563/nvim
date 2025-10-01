@@ -1,15 +1,17 @@
 return {
-  "andweeb/presence.nvim",
+  "vyfor/cord.nvim",
   enabled = true,
 
-  event = "VeryLazy", -- Optional: lazy load karne ke liye
+  event = "VeryLazy", -- Lazy loading on the VeryLazy event
   config = function()
-    require("presence").setup({
-      main_image = "neovim",
-
-      log_level = "error",
-      editing_text = "Editing: %s", -- File ka naam dikhane ke liye
-      buttons = false,
+    require("cord").setup({
+      display = {
+        theme = "default", -- You can change to "catppuccin", "atom", "classic", etc.
+        main_image = "neovim", -- Main icon image
+        editing_text = "Editing: %s", -- Text to show file name in activity
+        buttons = false, -- No buttons in presence
+      },
+      log_level = "error", -- Log level for errors only
     })
   end,
 }
