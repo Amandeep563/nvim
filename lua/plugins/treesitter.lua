@@ -19,6 +19,7 @@ return {
       "yaml",
       "toml",
       "gitignore",
+      "golang",
     },
     highlight = { enable = true },
     indent = { enable = true },
