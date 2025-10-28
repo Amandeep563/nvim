@@ -1,11 +1,27 @@
+-- return {
+--   {
+--     "gbprod/nord.nvim",
+--     lazy = false,
+--     priority = 1000,
+--     config = function()
+--       require("nord").setup({})
+--       vim.cmd.colorscheme("nord")
+--     end,
+--   },
+-- }
 return {
   {
-    "gbprod/nord.nvim",
-    lazy = false,
+    "mhartington/oceanic-next",
+    name = "oceanic-next",
     priority = 1000,
     config = function()
-      require("nord").setup({})
-      vim.cmd.colorscheme("nord")
+      vim.cmd.colorscheme("OceanicNext")
     end,
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "OceanicNext",
+    },
   },
 }

@@ -50,10 +50,10 @@ vim.keymap.set("n", "<leader>se", "<C-w>=", opts) -- make split windows equal wi
 vim.keymap.set("n", "<leader>xs", ":close<CR>", opts) -- close current split window
 
 -- Navigate between splits
-vim.keymap.set("n", "<C-k>", ":wincmd k<CR>", opts)
-vim.keymap.set("n", "<C-j>", ":wincmd j<CR>", opts)
-vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", opts)
-vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", opts)
+-- vim.keymap.set("n", "<C-k>", ":wincmd k<CR>", opts)
+-- vim.keymap.set("n", "<C-j>", ":wincmd j<CR>", opts)
+-- vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", opts)
+-- vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", opts)
 
 -- Tabs
 vim.keymap.set("n", "<leader>to", ":tabnew<CR>", opts) -- open new tab
@@ -82,3 +82,5 @@ end, { desc = "Go to next diagnostic message" })
 
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww god-tmux<CR>")
