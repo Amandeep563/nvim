@@ -20,6 +20,7 @@ return {
       "toml",
       "gitignore",
       "golang",
+      "svelte",
     },
     highlight = { enable = true },
     indent = { enable = true },
