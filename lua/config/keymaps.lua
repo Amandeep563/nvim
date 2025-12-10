@@ -84,3 +84,23 @@ vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Open float
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww god-tmux<CR>")
+
+--new keymaps
+-- Move current line / visual selection up & down (VS Code style Alt+↑ / Alt+↓)
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", opts) -- move current line down
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", opts) -- move current line up
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts) -- move selected block down
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts) -- move selected block up
+-- If Alt+j / Alt+k don't work in your terminal, change <A-j>/<A-k> to <C-j>/<C-k>
+
+-- Delete previous word in insert mode (like Ctrl+Backspace)
+-- (Vim already has <C-w> in insert mode, this just wires it to Ctrl+Backspace)
+vim.keymap.set("i", "<C-BS>", "<C-w>", opts)
+vim.keymap.set("i", "<C-h>", "<C-w>", opts) -- some terminals send <C-h> for Ctrl+Backspace
+
+-- Optional: fast delete / yank word + space using leader (built on 'daw' / 'yaw')
+vim.keymap.set("n", "<leader>dw", "daw", opts) -- delete word + trailing space
+vim.keymap.set("n", "<leader>yw", "yaw", opts) -- yank word + trailing space
+
+--rename
+vim.keymap.set("n", "<leader>rn", "ciw", opts) -- Space + r + n
