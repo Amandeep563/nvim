@@ -19,7 +19,7 @@ return {
       "yaml",
       "toml",
       "gitignore",
-      "golang",
+      "go",
       "svelte",
     },
     highlight = { enable = true },
